@@ -1,0 +1,33 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing page
+  screenshotPath: ../images/template-previews/landing-page.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block header %}
+  {% global_partial path="./partials/header-no-navigation.html" %}
+{% endblock header %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--landing-page"
+%}
+
+  {# Two column content with text #}
+
+  {% include_dnd_partial
+    path="../sections/lead-capture.html",
+    context={
+      "background_color": "#FFFFFF"
+    }
+  %}
+
+{% end_dnd_area %}
+{% endblock body %}
+
+{% block footer %}
+  {% global_partial path="./partials/footer.html" %}
+{% endblock footer %}

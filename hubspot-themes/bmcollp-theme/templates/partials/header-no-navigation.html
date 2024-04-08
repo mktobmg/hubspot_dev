@@ -1,0 +1,42 @@
+<!--
+  templateType: global_partial
+  label: Header no navigation
+-->
+<header class="header header--no-navigation">
+
+  {# Top header drag and drop area #}
+
+  {% dnd_area "header-top"
+    label="Top header",
+    class="content-wrapper"
+  %}
+  {% end_dnd_area %}
+
+  {# Main header #}
+
+  <div class="header__container content-wrapper">
+
+    {# Logo #}
+    {% dnd_area "header-logo"
+      label="Header Logo",
+      class="header__logo"
+    %}
+    {% end_dnd_area %}
+
+    {% dnd_area "header-ctc"
+      label="Header CTC",
+      class="header__ctc"
+    %}
+    {% end_dnd_area %}
+
+  </div>
+
+  {# Bottom header drag and drop area #}
+
+  {% dnd_area "header-bottom"
+    label="Bottom header",
+    class="content-wrapper"
+  %}
+  {% end_dnd_area %}
+
+</header>
